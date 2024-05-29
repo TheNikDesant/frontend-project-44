@@ -2,8 +2,10 @@ import playGame from '../index.js';
 
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const generateProgression = (start, step, length) =>
-  Array.from({ length }, (_, index) => start + index * step);
+const generateProgression = (start, step, length) => Array.from(
+  { length },
+  (_, index) => start + index * step,
+);
 
 const generateRound = () => {
   const progressionLength = generateRandomNumber(5, 10);
