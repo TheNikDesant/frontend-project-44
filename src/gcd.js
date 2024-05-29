@@ -2,9 +2,13 @@ import playGame from '../index.js';
 
 const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const gcd = (a, b) => {
+const gcd = (x, y) => {
+  let a = x;
+  let b = y;
   while (b !== 0) {
-    [a, b] = [b, a % b];
+    const temp = b;
+    b = a % b;
+    a = temp;
   }
   return a;
 };
